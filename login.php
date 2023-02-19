@@ -15,12 +15,12 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
     $id = $_POST['id'];
     $uname = $_POST['uname'];
     $pass = $_POST['password'];
-    $sql = "SELECT username FROM users WHERE username='' or 1=1 AND password='' or 1=1 ";
-    echo "Passed sql";
+    $sql = "SELECT username FROM users WHERE username='$uanme' AND password='$pass' ";
+    // echo "Passed sql";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         // $row = mysqli_fetch_assoc($result);
-        echo "Logged in $uname";
+        echo "Logged in as $uname";
         // if ($row['username'] === $uname && $row['password'] === $pass) {
         //     echo "Logged in $uname";
         // }
